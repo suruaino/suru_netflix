@@ -1,0 +1,1090 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --BG-CLR1: #000;
+    --BG-CLR2: #ef1111;
+    --BORDER-CLR: #222;
+    --TXT-CLR1: #fff;
+    --TXT-CLR2: #ff2222;
+    --BG-HOVER: #ae1111;
+    --TXT-CLR3: #777;
+    --FNT-SZ1: 3.5rem;
+    --FNT-SZ2: 3rem;
+    --FNT-SZ3: 2rem;
+    --FNT-SZ4: 1.5rem;
+    --FNT-SZ5: 1.2rem;
+    --FNT-SZ6: 1rem;
+    --FNT-SZ7: .8rem;
+    --OVERLAY-BG: linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .6), rgba(0, 0, 0, .9));
+}
+body{
+    background: var(--BG-CLR1);
+    color: var(--TXT-CLR1);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--TXT-CLR2);
+    height: 4rem;
+    padding: 20px 50px;
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    z-index: 20;
+}
+header .logo{
+    font-size: var(--FNT-SZ2);
+    
+}
+header .action a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--BG-CLR2);
+    padding: 12px 20px;
+    border-radius: 4px;
+}
+main{
+    background: url(assets/netflix\ bg.jpg);
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    border-bottom: 8px solid #222;
+    position: relative;
+    text-align: center;
+    padding: 0px 20px;
+    width: 100%;
+    
+}
+main .overlay{
+    background: var(--OVERLAY-BG);
+    inset: 0;
+    position: absolute;
+    z-index: 0;
+}
+main .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 40px 0px 0px 0px;
+    z-index: 20;
+}
+main .container h1{
+    font-size: var(--FNT-SZ1);
+    max-width: 600px;
+    
+}
+main .container h2,
+main .container h3{
+    font-size: var(--FNT-SZ4);
+    line-height: 25px;
+    color: white;
+}
+main .container .input{
+    margin-top: 20px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+   
+}
+main .container .input input{
+    height: 75px;
+    position: relative;
+    width: 550px;
+    border-radius: 4px 0px 0px 4px;
+    border: none;
+    outline: none;
+    padding: 15px;
+
+    
+}
+main .container label{
+    position: absolute;
+    z-index: 20;
+    color: gray;
+    inset: 25px 81% 30px 0px;
+    font-size: 1rem;
+}
+/* main .container .input input:focus ~ label{
+    translate: -10px 0px;
+    display: none;
+} */
+main .container .input input[type="submit"]{
+    background: #ff2222;
+    background-image: url(assets/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    color: white;
+    font-weight: bold;
+    font-size: var(--FNT-SZ4);
+    font-family: sans-serif;
+    width: 250px;
+    height: 75px;
+    padding: 0px 20px;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+}
+main .container .input input[type="submit"]:hover{
+    background: var(--BG-HOVER);
+    background-image: url(assets/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 100px 100px;
+    border-bottom: 8px solid var(--BORDER-CLR);
+    width: 100%;
+    
+}
+section .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+section .imgbx{
+    flex: 1;
+    
+}
+section h2{
+    font-size: var(--FNT-SZ2);
+}
+section p{
+    font-size: var(--FNT-SZ3);
+}
+section img{
+    width: 100%;
+}
+.no-image{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+.no-image .content {
+    width: 50%;
+    
+}
+
+.faq{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  
+}
+
+.faq .content{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    
+}
+.faq .content .items{
+  background: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  
+  
+}
+.faq .content .items .faq-items-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 300px;
+    margin-top: 0px;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.faq .content .items  .imgbx {
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.faq .content .items .imgbx img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.faq .content .items input[type="checkbox"]{
+    position: absolute;
+    justify-self: end;
+    opacity: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 20;
+}
+.faq .content .items input[type="checkbox"]:checked ~ .toggle-items{
+    display: block;
+}
+
+.faq .content .items .toggle-items{
+    display: flex;
+    flex-direction: column;
+    background: #333;
+    width: 100%;
+    min-height: 5rem;
+    padding: 20px 0px;
+    /* box-shadow: 0px 0px 8px gray; */
+    display: none;
+    text-align: justify;
+    transition: 1s;
+} 
+.faq .call-to-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.faq .call-to-action h3{
+    font-size: var(--FNT-SZ4);
+}
+.faq .call-to-action .input{
+    position: relative;
+    display: flex;
+}
+.faq .call-to-action .input input{
+    height: 75px;
+    position: relative;
+    width: 650px;
+    border-radius: 4px 0px 0px 4px;
+    border: none;
+    outline: none;
+
+}
+.faq .call-to-action .input label{
+    position: absolute;
+    inset: 30px 0 30px 20px;
+    color: gray;
+    z-index: 2;
+}
+.faq .call-to-action .input input[type="submit"]{
+    background: #ff2222;
+    background-image: url(assets/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 93% 50%;
+    color: white;
+    font-weight: bold;
+    font-size: var(--FNT-SZ3);
+    font-family: sans-serif;
+    width: 250px;
+    height: 75px;
+    padding: 0px 20px;
+    border-radius: 0px 4px 4px 0px;
+
+}
+.faq .call-to-action .input input[type="submit"]:hover{
+    background: var(--BG-HOVER);
+    background-image: url(assets/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 93% 50%;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: start;
+    padding: 80px 100px;
+    color: #777;
+    width: 100%;
+}
+
+footer .footer-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
+    column-gap: 10%;
+    /* grid-template-columns: repeat(auto-fit, minmax(0px, 10fr)); */
+}
+
+footer .footer-container p a{
+    text-decoration: none;
+    color: var(--TXT-CLR3);
+    font-size: var(--FNT-SZ6);
+}
+footer .footer-container .footer-content p a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 950px) {
+    header{
+        width: 100%;
+        padding: 20px 40px;
+        position: absolute;
+    }
+    header .logo{
+        font-size: var(--FNT-SZ3);
+        
+    }
+    header .action a{
+        background-color: var(--BG-CLR2);
+        padding: 6px 10px;
+
+    }
+    main{
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40rem;
+        border-bottom: 8px solid var(--BORDER-CLR);
+        position: relative;
+        text-align: center;
+        padding: 0px 20px;
+        width: 100%;
+        
+    }
+    
+    main .container{
+      
+        padding: 40px 0px 0px 0px;
+        z-index: 20;
+    }
+    main .container h1{
+        font-size: var(--FNT-SZ2);
+        max-width: 500px;
+        
+    }
+    main .container h2{
+        font-size: var(--FNT-SZ5);
+        max-width: 500px;
+    }
+    main .container h3{
+        font: var(--FNT-SZ6);
+        max-width: 550px;
+    }
+    
+    main .container .input input{
+        height: 50px;
+        width: 700px;
+        border-radius: 4px 0px 0px 4px;
+        padding: 15px;
+    
+        
+    }
+    main .container label{
+        inset: 15px 80% 30px 0px;
+        font-size: var(--FNT-SZ7);
+       
+    }
+    
+    main .container .input input[type="submit"]{
+        background-position: 93% 50%;
+        background-size: 8px;
+        width: 130px;
+        height: 50px;
+        font-size: var(--FNT-SZ6);
+        border-radius: 0px 4px 4px 0px;
+    }
+    main .container .input input[type="submit"]:hover{
+        background-position: 93% 50%;
+    }
+    section{
+        padding: 100px 40px;
+   }
+    section h2{
+        font-size: var(--FNT-SZ2);
+    }
+    section p{
+        font-size: var(--FNT-SZ4);
+       
+
+    }
+    section img{
+        width: 100%;
+    }
+    .no-image{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+    .no-image .content {
+        width: 50%;
+        
+    }
+    
+    .faq{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      
+    }
+    
+    .faq .content{
+        width: 100%;
+        
+    }
+    /* .faq .content .items{
+        height: 65px;
+        width: 650px;
+        
+    } */
+
+    .faq .content .items{
+        /* background-image: url(assets/cross.svg);
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: 560px; */
+        /* display: flex;
+        justify-content: space-between;
+        height: 45px;
+        max-width: 650px;
+        padding: 0px 8px;
+        padding-right: 0px; */
+      
+        
+    }
+    .faq .call-to-action{
+        width: 100%;
+        order: 3;
+    }
+    .faq .call-to-action h3{
+        font-size: var(--FNT-SZ5);
+    }
+    .faq .call-to-action .input{
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+    
+    }
+    .faq .call-to-action .input input{
+        height: 65px;
+        position: relative;
+        max-width: 500px;
+        border-radius: 4px 4px 4px 4px;
+        padding: 15px;
+    }
+    .faq .call-to-action .input label{
+        inset: 23px 80% 30px 12px;
+       
+    }
+    .faq .call-to-action .input input[type="submit"]{
+        background-position: 90% 50%;
+        width: 200px;
+        height: 65px;
+        font-size: var(--FNT-SZ5);
+    
+    }
+    .faq .call-to-action .input input[type="submit"]:hover{
+        background-position: 93% 50%;
+        
+    }
+   
+    footer .footer-container{
+        grid-template-columns: repeat(4, 1fr);
+        font-size: var(--FNT-SZ7);
+        
+    }
+   
+}
+
+
+@media only screen and (max-width: 768px) {
+    header{
+        height: 4rem;
+        padding: 20px 30px;
+        
+    }
+    header .logo{
+        font-size: var(--FNT-SZ3);
+        
+    }
+    header .action a{
+        padding: 10px 12px;
+       
+    }
+   
+    main .container .input{
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px; 
+       
+    }
+    main .container .input input{
+        height: 60px;
+        position: relative;
+        max-width: 520px;
+        border-radius: 4px 4px 4px 4px;
+        padding: 15px;
+    
+        
+    }
+    main .container label{
+        inset: 25px 68% 30px 0px;
+        font-size: var(--FNT-SZ6);
+       
+    }
+    
+    main .container .input input[type="submit"]{
+        background-position: 93% 50%;
+        width: 200px;
+        height: 60px;
+        border-radius: 4px 4px 4px 4px;
+    }
+    main .container .input input[type="submit"]:hover{
+        background-position: 93% 50%;
+    }
+    
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        width: 100%;
+        padding: 100px 40px;
+    
+    }
+    section .content{
+        order: 1;
+        
+    }
+    section .imgbx{
+        order: 2;
+        
+    }
+    section h2{
+        font-size: var(--FNT-SZ2);
+    }
+    section p{
+        font-size: var(--FNT-SZ4);
+
+    }
+    section img{
+        width: 100%;
+    }
+    .no-image{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+    }
+    .no-image .content {
+        width: 100%;
+        
+    }
+    
+    .faq{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      
+    }
+    
+    .faq .content{
+        width: 100%;
+        
+    }
+    /* .faq .content .items{
+        height: 65px;
+        width: 600px;
+        
+    } */
+
+    .faq .content .items{
+        /* background-image: url(assets/cross.svg);
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: 560px; */
+        /* display: flex;
+        justify-content: space-between;
+        height: 45px;
+        width: 100%;
+        padding: 0px 8px;
+        padding-right: 0px; */
+       
+    }
+    .faq .call-to-action{
+        width: 100%;
+        order: 3;
+    }
+    .faq .call-to-action h3{
+        font-size: var(--FNT-SZ5);
+    }
+    .faq .call-to-action .input{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .faq .call-to-action .input input{
+        height: 65px;
+        position: relative;
+        width: 550px;
+        border-radius: 4px 4px 4px 4px;
+        padding: 15px;
+    }
+    .faq .call-to-action .input label{
+        inset: 23px 80% 30px 0px;
+        /* font-size: var(--FNT-SZ4); */
+       
+    }
+    .faq .call-to-action .input input[type="submit"]{
+        background-position: 93% 50%;
+        width: 250px;
+        height: 60px;
+        border-radius: 4px 4px 4px 4px;
+    
+    }
+    .faq .call-to-action .input input[type="submit"]:hover{
+        background-position: 93% 50%;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: start;
+        padding: 80px 100px;
+        color: #777;
+        width: 100%;
+    }
+    
+    footer .footer-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 10px;
+        column-gap: 10%;
+        /* grid-template-columns: repeat(auto-fit, minmax(0px, 10fr)); */
+    }
+    
+    footer .footer-container p a{
+        color: var(--TXT-CLR3);
+        font-size: var(--FNT-SZ6);
+    }
+    
+    
+}
+
+@media only screen and (max-width: 540px) {
+    header{
+        height: 2rem;
+        padding: 20px 15px;
+        
+    }
+    header .logo{
+        font-size: var(--FNT-SZ4);
+        
+    }
+    header .action a{
+        padding: 6px 6px;
+       
+    }
+    main{
+        height: 30rem;
+        padding: 0px 20px;
+        
+    }
+   
+    main .container{
+        padding: 100px 0px 0px 0px;
+
+    }
+    main .container h1{
+        font-size: var(--FNT-SZ3);
+        max-width: 600px;
+        
+    }
+    main .container h2,
+    main .container h3{
+        font-size: var(--FNT-SZ5);
+        line-height: 20px;
+        color: white;
+        max-width: 250px;
+    }
+    
+   
+    main .container .input input{
+        height: 50px;
+        max-width: 300px;    
+        
+    }
+    main .container label{
+        inset: 15px 45% 30px -22px;
+        font-size: var(--FNT-SZ6);
+       
+    }
+    
+    main .container .input input[type="submit"]{
+        background-position: 85% 50%;
+        background-size: 6px;
+        font-size: var(--FNT-SZ6);
+        font-family: sans-serif;
+        width: 150px;
+        height: 40px;
+
+    }
+    main .container .input input[type="submit"]:hover{
+        background-position: 85% 50%;
+    }
+    
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        width: 100%;
+        padding: 100px 20px;
+        
+    }
+    section .content{
+        order: 1;
+        
+    }
+    section .imgbx{
+        order: 2;
+        
+    }
+    section h2{
+        font-size: var(--FNT-SZ4);
+    }
+    section p{
+        font-size: var(--FNT-SZ6);
+
+    }
+   
+    .faq .content .items{
+        background: #333;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        height: auto;
+        width: 100%;
+        padding: 10px;
+        
+        
+      }
+      .faq .content .items .faq-items-header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 200px;
+          margin-top: 0px;
+          width: 100%;
+          transition: 0.5s;
+      }
+      
+      .faq .content .items  .imgbx {
+          width: 20px;
+          height: 20px;
+          padding: 4px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+      }
+      .faq .content .items .imgbx img{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+      }
+      .faq .content .items input[type="checkbox"]{
+          position: absolute;
+          justify-self: end;
+          opacity: 0;
+          width: 100%;
+          height: 30px;
+          z-index: 20;
+      }
+      .faq .content .items input[type="checkbox"]:checked ~ .toggle-items{
+          display: block;
+      }
+      
+      .faq .content .items .toggle-items{
+          display: flex;
+          flex-direction: column;
+          background: #333;
+          width: 100%;
+          min-height: 5rem;
+          padding: 20px 0px;
+          /* box-shadow: 0px 0px 8px gray; */
+          display: none;
+          text-align: justify;
+          transition: 1s;
+      } 
+    /* .faq .content .items{
+        height: 45px;
+        width: 310px;
+        
+    } */
+
+    .faq .call-to-action .input input{
+        height: 50px;
+        width: 300px;    
+    }  
+    .faq .call-to-action .input label{
+        inset: 15px 60% 30px -22px;
+        font-size: var(--FNT-SZ6);
+       
+    }
+    .faq .call-to-action .input input[type="submit"]{
+        background-position: 85% 50%;
+        background-size: 6px;
+        font-size: var(--FNT-SZ6);
+        font-family: sans-serif;
+        width: 150px;
+        height: 40px;
+    
+    }
+    .faq .call-to-action .input input[type="submit"]:hover{
+        background-position: 85% 50%;
+    }
+    footer{
+        padding: 80px 40px;
+        
+    } 
+    footer .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    
+    footer .footer-container p a{
+        font-size: var(--FNT-SZ7);
+    }
+    
+    
+}
+
+@media only screen and (max-width: 320px) {
+    header{
+        height: 2rem;
+        padding: 20px 15px;
+        
+    }
+    header .logo{
+        font-size: var(--FNT-SZ4);
+        
+    }
+    header .action a{
+        padding: 6px 6px;
+       
+    }
+    main{
+        height: 30rem;
+        padding: 0px 20px;
+        
+    }
+   
+    main .container{
+        padding: 100px 0px 0px 0px;
+
+    }
+    main .container h1{
+        font-size: var(--FNT-SZ4);
+        max-width: 600px;
+        
+    }
+    main .container h2,
+    main .container h3{
+        /* font-size: var(--FNT-SZ6); */
+        font-size: 1rem;
+        line-height: 20px;
+        color: white;
+        max-width: 250px;
+    }
+    
+   
+    main .container .input input{
+        height: 50px;
+        max-width: 250px;    
+        
+    }
+    main .container label{
+        inset: 15px 45% 30px -22px;
+        font-size: var(--FNT-SZ6);
+       
+    }
+    
+    main .container .input input[type="submit"]{
+        background-position: 85% 50%;
+        background-size: 6px;
+        font-size: var(--FNT-SZ6);
+        font-family: sans-serif;
+        width: 150px;
+        height: 40px;
+
+    }
+    main .container .input input[type="submit"]:hover{
+        background-position: 85% 50%;
+    }
+    
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        width: 100%;
+        padding: 100px 20px;
+        
+    }
+    section .content{
+        order: 1;
+        
+    }
+    section .imgbx{
+        order: 2;
+        
+    }
+    section h2{
+        font-size: var(--FNT-SZ4);
+    }
+    section p{
+        font-size: var(--FNT-SZ6);
+
+    }
+   
+    .faq .content .items{
+        background: #333;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        height: auto;
+        width: 100%;
+        padding: 10px;
+        
+        
+      }
+      .faq .content .items .faq-items-header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 100px;
+          margin-top: 0px;
+          width: 100%;
+          transition: 0.5s;
+      }
+      
+      .faq .content .items  .imgbx {
+          width: 20px;
+          height: 20px;
+          padding: 4px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+      }
+      .faq .content .items .imgbx img{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+      }
+      .faq .content .items input[type="checkbox"]{
+          position: absolute;
+          justify-self: end;
+          opacity: 0;
+          width: 100%;
+          height: 30px;
+          z-index: 20;
+      }
+      .faq .content .items input[type="checkbox"]:checked ~ .toggle-items{
+          display: block;
+      }
+      
+      .faq .content .items .toggle-items{
+          display: flex;
+          flex-direction: column;
+          background: #333;
+          width: 100%;
+          min-height: 5rem;
+          padding: 20px 0px;
+          /* box-shadow: 0px 0px 8px gray; */
+          display: none;
+          text-align: justify;
+          transition: 1s;
+      } 
+   
+    .faq .call-to-action .input input{
+        height: 50px;
+        max-width: 250px;    
+    }  
+    .faq .call-to-action .input label{
+        inset: 15px 60% 30px -22px;
+        font-size: var(--FNT-SZ6);
+       
+    }
+    .faq .call-to-action .input input[type="submit"]{
+        background-position: 85% 50%;
+        background-size: 6px;
+        font-size: var(--FNT-SZ6);
+        font-family: sans-serif;
+        width: 150px;
+        height: 40px;
+    
+    }
+    .faq .call-to-action .input input[type="submit"]:hover{
+        background-position: 85% 50%;
+    }
+    footer{
+        padding: 80px 40px;
+        
+    } 
+    footer .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    
+    footer .footer-container p a{
+        font-size: var(--FNT-SZ7);
+    }
+    
+    
+}
+    
