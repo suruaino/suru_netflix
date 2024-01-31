@@ -308,8 +308,9 @@ section img{
     width: 250px;
     height: 75px;
     padding: 0px 20px;
+    border: none;
     border-radius: 0px 4px 4px 0px;
-
+    cursor: pointer;
 }
 .faq .call-to-action .input input[type="submit"]:hover{
     background: var(--BG-HOVER);
@@ -455,26 +456,7 @@ footer .footer-container .footer-content p a:hover{
         width: 100%;
         
     }
-    /* .faq .content .items{
-        height: 65px;
-        width: 650px;
-        
-    } */
 
-    .faq .content .items{
-        /* background-image: url(assets/cross.svg);
-        background-repeat: no-repeat;
-        background-size: 20px;
-        background-position: 560px; */
-        /* display: flex;
-        justify-content: space-between;
-        height: 45px;
-        max-width: 650px;
-        padding: 0px 8px;
-        padding-right: 0px; */
-      
-        
-    }
     .faq .call-to-action{
         width: 100%;
         order: 3;
@@ -484,7 +466,6 @@ footer .footer-container .footer-content p a:hover{
     }
     .faq .call-to-action .input{
         display: flex;
-        /* flex-direction: column; */
         align-items: center;
     
     }
@@ -624,25 +605,7 @@ footer .footer-container .footer-content p a:hover{
         width: 100%;
         
     }
-    /* .faq .content .items{
-        height: 65px;
-        width: 600px;
-        
-    } */
 
-    .faq .content .items{
-        /* background-image: url(assets/cross.svg);
-        background-repeat: no-repeat;
-        background-size: 20px;
-        background-position: 560px; */
-        /* display: flex;
-        justify-content: space-between;
-        height: 45px;
-        width: 100%;
-        padding: 0px 8px;
-        padding-right: 0px; */
-       
-    }
     .faq .call-to-action{
         width: 100%;
         order: 3;
@@ -665,7 +628,6 @@ footer .footer-container .footer-content p a:hover{
     }
     .faq .call-to-action .input label{
         inset: 23px 80% 30px 0px;
-        /* font-size: var(--FNT-SZ4); */
        
     }
     .faq .call-to-action .input input[type="submit"]{
@@ -695,7 +657,6 @@ footer .footer-container .footer-content p a:hover{
         grid-template-columns: repeat(3, 1fr);
         row-gap: 10px;
         column-gap: 10%;
-        /* grid-template-columns: repeat(auto-fit, minmax(0px, 10fr)); */
     }
     
     footer .footer-container p a{
@@ -856,11 +817,6 @@ footer .footer-container .footer-content p a:hover{
           text-align: justify;
           transition: 1s;
       } 
-    /* .faq .content .items{
-        height: 45px;
-        width: 310px;
-        
-    } */
 
     .faq .call-to-action .input input{
         height: 50px;
@@ -871,16 +827,16 @@ footer .footer-container .footer-content p a:hover{
         font-size: var(--FNT-SZ6);
        
     }
-    .faq .call-to-action .input input[type="submit"]{
+    .faq .call-to-action .input button{
         background-position: 85% 50%;
         background-size: 6px;
         font-size: var(--FNT-SZ6);
         font-family: sans-serif;
         width: 150px;
         height: 40px;
-    
+        cursor: pointer;
     }
-    .faq .call-to-action .input input[type="submit"]:hover{
+    .faq .call-to-action .input  button:hover{
         background-position: 85% 50%;
     }
     footer{
@@ -930,7 +886,6 @@ footer .footer-container .footer-content p a:hover{
     }
     main .container h2,
     main .container h3{
-        /* font-size: var(--FNT-SZ6); */
         font-size: 1rem;
         line-height: 20px;
         color: white;
@@ -1045,7 +1000,6 @@ footer .footer-container .footer-content p a:hover{
           width: 100%;
           min-height: 5rem;
           padding: 20px 0px;
-          /* box-shadow: 0px 0px 8px gray; */
           display: none;
           text-align: justify;
           transition: 1s;
@@ -1083,8 +1037,7 @@ footer .footer-container .footer-content p a:hover{
     
     footer .footer-container p a{
         font-size: var(--FNT-SZ7);
-    }
-    
+    }  
     
 }
     
