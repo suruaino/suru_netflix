@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+* section{
+    max-width: 100%;
+}
 :root{
     --BG-CLR1: #000;
     --BG-CLR2: #ef1111;
@@ -22,13 +24,12 @@
     --OVERLAY-BG: linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .6), rgba(0, 0, 0, .9));
 }
 body{
+    max-width: 100%;
     background: var(--BG-CLR1);
     color: var(--TXT-CLR1);
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
 }
 header{
     display: flex;
@@ -56,36 +57,43 @@ header .action a{
     border-radius: 4px;
 }
 main{
-    background: url(assets/netflix\ bg.jpg);
+    width: 100%;
     background-color: #000;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50rem;
-    border-bottom: 8px solid #222;
-    position: relative;
     text-align: center;
-    padding: 0px 20px;
     width: 100%;
     
+}
+main .hero{
+    background: url(assets/netflix\ bg.jpg);
+    position: relative;
+    height: 100dvh;
+    width: 100%;
+    z-index: 0;
 }
 main .overlay{
     background: var(--OVERLAY-BG);
     inset: 0;
     position: absolute;
-    z-index: 0;
+    z-index: 1;
 }
-main .container{
+main .hero .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     width: 100%;
+    height: 100%;
     padding: 40px 0px 0px 0px;
-    z-index: 20;
+    z-index: 2;
+    position: relative;
+    
 }
 main .container h1{
     font-size: var(--FNT-SZ1);
@@ -100,33 +108,20 @@ main .container h3{
 }
 main .container .input{
     margin-top: 20px;
-    position: relative;
-    justify-content: center;
     display: flex;
    
 }
 main .container .input input{
     height: 75px;
-    position: relative;
     width: 550px;
     border-radius: 4px 0px 0px 4px;
     border: none;
     outline: none;
     padding: 15px;
-
+    font-size: 18px;
     
 }
-main .container label{
-    position: absolute;
-    z-index: 20;
-    color: gray;
-    inset: 25px 81% 30px 0px;
-    font-size: 1rem;
-}
-/* main .container .input input:focus ~ label{
-    translate: -10px 0px;
-    display: none;
-} */
+
 main .container .input input[type="submit"]{
     background: #ff2222;
     background-image: url(assets/arrow.svg);
@@ -155,12 +150,13 @@ section{
     justify-content: center;
     align-items: center;
     gap: 40px;
-    padding: 100px 100px;
     border-bottom: 8px solid var(--BORDER-CLR);
+    padding: 20px;
     width: 100%;
     
 }
 section .content{
+    /* max-width: 100%; */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -177,9 +173,11 @@ section p{
     font-size: var(--FNT-SZ3);
 }
 section img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 .no-image{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -262,7 +260,6 @@ section img{
     width: 100%;
     min-height: 5rem;
     padding: 20px 0px;
-    /* box-shadow: 0px 0px 8px gray; */
     display: none;
     text-align: justify;
     transition: 1s;
@@ -278,23 +275,16 @@ section img{
     font-size: var(--FNT-SZ4);
 }
 .faq .call-to-action .input{
-    position: relative;
     display: flex;
 }
 .faq .call-to-action .input input{
     height: 75px;
-    position: relative;
-    width: 650px;
+    width: 550px;
     border-radius: 4px 0px 0px 4px;
     border: none;
     outline: none;
-
-}
-.faq .call-to-action .input label{
-    position: absolute;
-    inset: 30px 0 30px 20px;
-    color: gray;
-    z-index: 2;
+    padding: 15px;
+    font-size: 18px;
 }
 .faq .call-to-action .input input[type="submit"]{
     background: #ff2222;
@@ -326,7 +316,8 @@ footer{
     align-items: start;
     padding: 80px 100px;
     color: #777;
-    width: 100%;
+    max-width: 100%;
+    background-color: var(--BG-CLR1);
 }
 
 footer .footer-container{
@@ -335,7 +326,6 @@ footer .footer-container{
     grid-template-columns: repeat(4, 1fr);
     row-gap: 10px;
     column-gap: 10%;
-    /* grid-template-columns: repeat(auto-fit, minmax(0px, 10fr)); */
 }
 
 footer .footer-container p a{
@@ -363,53 +353,43 @@ footer .footer-container .footer-content p a:hover{
 
     }
     main{
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 40rem;
-        border-bottom: 8px solid var(--BORDER-CLR);
-        position: relative;
         text-align: center;
         padding: 0px 20px;
         width: 100%;
         
     }
-    
-    main .container{
+   
+    main .hero .container{
       
         padding: 40px 0px 0px 0px;
         z-index: 20;
     }
-    main .container h1{
+    main .hero .container h1{
         font-size: var(--FNT-SZ2);
         max-width: 500px;
         
     }
-    main .container h2{
+    main .hero .container h2{
         font-size: var(--FNT-SZ5);
         max-width: 500px;
     }
-    main .container h3{
+    main .hero .container h3{
         font: var(--FNT-SZ6);
         max-width: 550px;
     }
-    
-    main .container .input input{
+    main .hero .container .input{
+        display: flex;
+    }
+    main .hero .container .input input{
         height: 50px;
         width: 700px;
         border-radius: 4px 0px 0px 4px;
         padding: 15px;
-    
+        font-size: 18px;
         
     }
-    main .container label{
-        inset: 15px 80% 30px 0px;
-        font-size: var(--FNT-SZ7);
-       
-    }
-    
-    main .container .input input[type="submit"]{
+      
+    main .hero .container .input input[type="submit"]{
         background-position: 93% 50%;
         background-size: 8px;
         width: 130px;
@@ -417,7 +397,7 @@ footer .footer-container .footer-content p a:hover{
         font-size: var(--FNT-SZ6);
         border-radius: 0px 4px 4px 0px;
     }
-    main .container .input input[type="submit"]:hover{
+    main .hero .container .input input[type="submit"]:hover{
         background-position: 93% 50%;
     }
     section{
@@ -467,13 +447,12 @@ footer .footer-container .footer-content p a:hover{
     .faq .call-to-action .input{
         display: flex;
         align-items: center;
-    
+        justify-content: center;
     }
     .faq .call-to-action .input input{
         height: 65px;
-        position: relative;
         max-width: 500px;
-        border-radius: 4px 4px 4px 4px;
+        border-radius: 4px 0 0 4px;
         padding: 15px;
     }
     .faq .call-to-action .input label{
@@ -518,7 +497,7 @@ footer .footer-container .footer-content p a:hover{
    
     main .container .input{
         margin-top: 20px;
-        position: relative;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -528,10 +507,10 @@ footer .footer-container .footer-content p a:hover{
     }
     main .container .input input{
         height: 60px;
-        position: relative;
+
         max-width: 520px;
-        border-radius: 4px 4px 4px 4px;
-        padding: 15px;
+        border-radius: 4px 0 0 4px;
+        /* padding: 15px; */
     
         
     }
@@ -617,19 +596,16 @@ footer .footer-container .footer-content p a:hover{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 18px;
     }
     .faq .call-to-action .input input{
         height: 65px;
-        position: relative;
         width: 550px;
-        border-radius: 4px 4px 4px 4px;
+        border-radius: 4px 0 0 4px;
         padding: 15px;
     }
-    .faq .call-to-action .input label{
-        inset: 23px 80% 30px 0px;
-       
-    }
+   
     .faq .call-to-action .input input[type="submit"]{
         background-position: 93% 50%;
         width: 250px;
@@ -682,7 +658,7 @@ footer .footer-container .footer-content p a:hover{
        
     }
     main{
-        height: 30rem;
+
         padding: 0px 20px;
         
     }
@@ -708,7 +684,9 @@ footer .footer-container .footer-content p a:hover{
     main .container .input input{
         height: 50px;
         max-width: 300px;    
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     main .container label{
         inset: 15px 45% 30px -22px;
@@ -858,7 +836,7 @@ footer .footer-container .footer-content p a:hover{
 @media only screen and (max-width: 320px) {
     header{
         height: 2rem;
-        padding: 20px 15px;
+        padding: 20px 40px;
         
     }
     header .logo{
@@ -870,7 +848,6 @@ footer .footer-container .footer-content p a:hover{
        
     }
     main{
-        height: 30rem;
         padding: 0px 20px;
         
     }
